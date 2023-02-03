@@ -1,0 +1,77 @@
+# Naguita-Korkina-IT-2B
+
+//Korkina Naguita IT-2B
+
+    import java.util.ArrayList;
+    import java.util.Scanner;
+
+    
+import java.util.*; 
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class NewMain {
+ 
+    static  ArrayList <Hardware> Hardwares = new ArrayList<>();
+    static  ArrayList <Employee> borrower = new ArrayList<>();
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+                      
+			Scanner s = new Scanner(System.in);
+		
+			int i;
+			do {
+				System.out.println("1.INSERT PERIPHERAL");
+				System.out.println("2.DESIGNATE PERIPHERAL");
+				System.out.println("3.VIEW TRANSACTION");
+				System.out.println("4.VIEW ALL HARDWARES");
+				System.out.print("Enter Your Choice : ");
+				i = s.nextInt();
+				
+				switch(i) {
+                                   
+					
+                                         case 1:
+                                         {
+                                            System.out.println("Enter Hardware name:");
+                                            String Name = s.next();
+                                            System.out.println("enter code:");
+                                           
+                                            System.out.println("Enter typeofperipheral:");
+                                            String typeofperipheral = s.nextLine();
+                           
+                                            Hardwares.add(new Hardware(Name,typeofperipheral));  
+                                           
+                                 }
+					  case 2: {
+                                            System.out.println("Enter Nameofborrower:");
+                                            String Nameofborrower = s.next();
+                                            System.out.println("Enter typeofperipheral:");
+                                            String itemborrowed = s.nextLine();
+                                            
+                                            borrower.add (new Employee(Nameofborrower,itemborrowed));
+                                            
+                                 }
+					case 3:{
+                                            
+                                            System.out.println(borrower);
+                                 }  
+					
+					case 4: {
+                                            
+                                            System.out.println(Hardwares);
+                                 }
+						
+					
+				}
+			}while(i!=0);
+			
+				
+			}
+    }
+    
